@@ -1,7 +1,6 @@
-import java.util.Arrays;
-import java.util.List;
+package Day1;
 
-public class Day1 implements TestInterface {
+public class Types {
 
     public static void main(String[] args) {
         int a = 20, b = 30, c = 50;
@@ -17,28 +16,36 @@ public class Day1 implements TestInterface {
         float e = 0.1f;
         double f = 0.2;
 
-        // 문자형 자료형
-        char a = 'a'; // 문자
+        // 문자 자료형
+        char g = 'a'; // 문자
 
         // boolean
         boolean isTrue = true;
         boolean isFalse = false;
+        if (isTrue) {
+            System.out.println("이건 트루입니다.");
+        } else {
+            System.out.println("이건 펄스입니다.");
+        }
 
         // 문자열 자료형
         String str = "Hello World";
 
-        int b = 2343243244;
-        short c = 234234234234;
-        byte d = 234123214124;
+        // 정수 자료형 범위
+        int h = 2343243244;
+        short i = 234234234234;
+        byte j = 234123214124;
 
-        int a = 1;
-        int b = a;
+        int k = 1;
+        int l = a;
         System.out.println(a);
         System.out.println(b);
-        byte b = 127;
+
+        byte m = 127;
         b++;
         System.out.println(b);
 
+        // 정수형도 되는 char
         char c1 = 'A';
         char c2 = 65;
         char c3 = '\u0041';
@@ -66,26 +73,5 @@ public class Day1 implements TestInterface {
 
         System.out.println("Original Float Value: " + myFloat);
         System.out.println("Calculated Float Value: " + anotherFloat);
-
-        boolean isTrue = false;
-        if (!isTrue) {
-            System.out.println("이건 트루입니다.");
-        } else {
-            System.out.println("이건 펄스입니다.");
-        }
-        int[] arr = {1, 2, 3, 4, 5};
-        int[] arr2 = new int[5];
-        System.out.println(arr[0]);
-        System.out.println(arr2[0]);
-
-        List<Integer> list = Arrays.asList(1);
-        System.out.println(list.get(0));
-
-
-    }
-
-    @Override
-    public void test() {
-
     }
 }
