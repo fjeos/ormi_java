@@ -3,8 +3,8 @@ package Day1;
 public class Types {
 
     public static void main(String[] args) {
-        int a = 20, b = 30, c = 50;
-        System.out.println(a + b + c);
+        int a1 = 20, b1 = 30, d1 = 50;
+        System.out.println(a1 + b1 + d1);
 
         // 정수형 자료형
         int a = 1;
@@ -32,9 +32,9 @@ public class Types {
         String str = "Hello World";
 
         // 정수 자료형 범위
-        int h = 2343243244;
-        short i = 234234234234;
-        byte j = 234123214124;
+//        int h = 2343243244;
+//        short i = 234234234234;
+//        byte j = 234123214124;
 
         int k = 1;
         int l = a;
