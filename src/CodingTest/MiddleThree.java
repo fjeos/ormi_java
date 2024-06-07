@@ -21,8 +21,4 @@ public class MiddleThree {
         }
         return "even string";
     }
-
-    // static -> 클래스 레벨의 필드와 메서드를 정의할 때 사용하는 키워드
-
-
 }
