@@ -10,12 +10,15 @@ public class WeeklyQuiz1 {
             if (input == 0){
                 System.out.println("프로그램을 종료합니다.");
                 break;
+            } else if(input > 4){
+                System.out.println("올바른 입력이 아닙니다.");
+                continue;
             }
-
             System.out.println("첫번째 값을 입력하고 엔터를 누르세요.");
             int num1 = scan.nextInt();
             System.out.println("두번째 값을 입력하고 엔터를 누르세요.");
             int num2 = scan.nextInt();
+
             switch (input) {
                 case 1:
                     System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
