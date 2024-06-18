@@ -2,13 +2,12 @@ package WeeklyQuiz2;
 
 public class MallTest {
     public static void main(String[] args) {
-        Clothing hat = new Clothing("hat", 10000, 5, "L");
+        Clothing hat = new Clothing("hat", 10000, 5, "XXL");
         Clothing dress = new Clothing("dress", 15000, 22, "S");
         Electronics computer = new Electronics("computer", 100000, 3, "LG");
         Electronics iPhone = new Electronics("IPhone", 2000000, 1, "Apple");
         Food milk = new Food("milk", 5000, 10, "8/30");
         Food candy = new Food("candy", 300, 40, "6/20");
-
 
         // 각 상품의 가격 출력
         System.out.println("모자의 가격: " + hat.calculatePrice());
@@ -40,9 +39,12 @@ public class MallTest {
         System.out.println();
 
         //  stock에 따른 주문 가능 여부 출력
-        System.out.println(mall.checkOrderAvailability(hat) ? hat.getName() + "은(는) 주문이 가능합니다." : hat.getName() + "은(는) 주문이 불가능합니다.");
-        System.out.println(mall.checkOrderAvailability(milk) ? milk.getName() + "은(는) 주문이 가능합니다." : milk.getName() + "은(는) 주문이 불가능합니다.");
-        System.out.println(mall.checkOrderAvailability(dress) ? dress.getName() + "은(는) 주문이 가능합니다." : dress.getName() + "은(는) 주문이 불가능합니다.");
+        System.out.println(mall.checkOrderAvailability(hat) ? hat.getName() + "은(는) 주문이 가능합니다."
+                                                            : hat.getName() + "은(는) 주문이 불가능합니다.");
+        System.out.println(mall.checkOrderAvailability(milk) ? milk.getName() + "은(는) 주문이 가능합니다."
+                                                            : milk.getName() + "은(는) 주문이 불가능합니다.");
+        System.out.println(mall.checkOrderAvailability(dress) ? dress.getName() + "은(는) 주문이 가능합니다."
+                                                            : dress.getName() + "은(는) 주문이 불가능합니다.");
         System.out.println();
 
         // 상품 목록을 전부 비운 후 출력 시도

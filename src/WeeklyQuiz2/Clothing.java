@@ -10,8 +10,9 @@ public class Clothing extends Product{
 
     @Override
     public int calculatePrice() {
-        if(!size.equals("S") && !size.equals("M")) {
-            return getPrice() + (int)(getPrice()* 0.2);
+        // size 문자열에 L이 들어가 있으면 -> L, XL, XXL...등 처리
+        if(size.contains("L")) {
+            return getPrice() + (int)(getPrice()* 0.1);
         }
         else return getPrice();
     }
