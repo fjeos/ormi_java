@@ -39,16 +39,4 @@ public class Product {
         return this.price;
     }
 
-    public void addProduct(){
-
-    }
-
-    public void removeProduct() {
-
-    }
-
-    public void displayProducts() {
-
-
-    }
 }

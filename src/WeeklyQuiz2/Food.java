@@ -10,6 +10,10 @@ public class Food extends Product {
         this.expirationDate = date;
     }
 
+    public String getExpirationDate() {
+        return expirationDate;
+    }
+
     @Override
     public int calculatePrice() {
         // Calendar로부터 오늘 날짜의 월, 일을 가져옴

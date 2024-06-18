@@ -8,6 +8,10 @@ public class Electronics extends Product{
         this.brand = brand;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
     @Override
     public int calculatePrice() {
         int price = getPrice();

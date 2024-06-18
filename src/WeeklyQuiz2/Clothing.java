@@ -8,6 +8,10 @@ public class Clothing extends Product{
         this.size = size;
     }
 
+    public String getSize() {
+        return size;
+    }
+
     @Override
     public int calculatePrice() {
         // size 문자열에 L이 들어가 있으면 -> L, XL, XXL...등 처리

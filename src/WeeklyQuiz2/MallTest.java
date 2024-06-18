@@ -33,7 +33,7 @@ public class MallTest {
         System.out.println();
 
         // computer 상품 삭제 후 목록 출력
-        mall.removeProduct(computer);
+        mall.removeProduct(computer, computer.getName());
         System.out.println();
         mall.displayProducts();
         System.out.println();
@@ -45,18 +45,6 @@ public class MallTest {
                                                             : milk.getName() + "은(는) 주문이 불가능합니다.");
         System.out.println(mall.checkOrderAvailability(dress) ? dress.getName() + "은(는) 주문이 가능합니다."
                                                             : dress.getName() + "은(는) 주문이 불가능합니다.");
-        System.out.println();
-
-        // 상품 목록을 전부 비운 후 출력 시도
-        mall.removeProduct(hat);
-        mall.removeProduct(dress);
-        mall.removeProduct(iPhone);
-        mall.removeProduct(milk);
-        mall.removeProduct(candy);
-        System.out.println();
-        mall.displayProducts();
-        // 빈 상품 목록에 상품 삭제 시도
-        mall.removeProduct(new Product("product", 30000, 15));
 
     }
 }
