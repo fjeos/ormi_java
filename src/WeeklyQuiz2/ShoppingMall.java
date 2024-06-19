@@ -15,14 +15,19 @@ public abstract class ShoppingMall {
 
     // 상품 추가
     public void addProduct(Product product) {
-        //  배열의 요소 수가 products의 길이보다 크거나 같아지면 배열의 길이를 두 배로 늘림
+        //  배열의 요소 수가 products의 길이보다 크거나 같아지면 makeArray() 호출
         if (count >= products.length) {
-            products = Arrays.copyOf(products, products.length * 2);
+            makeArray();
         }
         products[count] = product;
         count++;
         System.out.println("상품 추가: " + product.getName());
-        System.out.println("현재 상품 총량: " + products.length);
+    }
+
+    // 배열을 두 배로 늘림
+    public void makeArray(){
+        products = Arrays.copyOf(products, products.length * 2);
+        System.out.println("상품 총량 증가 -> " + products.length);
     }
 
     // 상품 삭제
@@ -39,15 +44,20 @@ public abstract class ShoppingMall {
             // 마지막 요소 제거
             products = Arrays.copyOf(products, products.length - 1);
         } else {
-            System.out.println("쇼핑몰에 상품이 없습니다.");
+            System.out.println("상품이 존재하지 않습니다.");
         }
+    }
+
+    // removeProduct 오버로딩 -> 상품 목록 자체를 삭제
+    public void removeProduct() {
+        this.products = null;
     }
 
     // 상품 목룍 출력
     public void displayProducts() {
         System.out.println("======현재 상품 목록======");
         int index = 0;
-        while (index < products.length && products[index] != null) {
+        while (products != null && index < products.length && products[index] != null) {
             Product product = products[index];
             System.out.print("상품명: " + product.getName() +
                     " 가격: " + product.getPrice() +

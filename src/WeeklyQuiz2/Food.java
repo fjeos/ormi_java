@@ -29,7 +29,7 @@ public class Food extends Product {
         // 현재 월과 유통기한 만료 월이 같고
         if (month == exMonth) {
             // 일수 차이가 7일 이하면 할인된 가격 반환
-            if (Math.abs(exDay - day) % 30 <= 7) {
+            if (Math.abs(exDay - day) <= 7) {
                 return (int) (this.getPrice() - this.getPrice() * 0.2);
             } else return this.getPrice();
         } else return this.getPrice();  // 현재 월과 유통기한 만료 월이 다르면 현재 가격 반환
